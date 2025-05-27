@@ -4,12 +4,6 @@ from src.preprocessing import clean_text
 model = joblib.load("models/logistic_model.pkl")
 vectorizer = joblib.load("models/vectorizer.pkl")
 
-import joblib
-from src.preprocessing import clean_text
-
-model = joblib.load("models/logistic_model.pkl")
-vectorizer = joblib.load("models/vectorizer.pkl")
-
 def predict_text(text):
     clean = clean_text(text)
     vect = vectorizer.transform([clean])
