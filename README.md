@@ -79,3 +79,11 @@ A base de dados está na pasta `/data`
 - NLTK
 - Streamlit
 - Docker
+
+---
+
+🧠 O modelo (`models/logistic_model.pkl`) já está treinado e pronto para uso.
+Caso deseje treiná-lo novamente, execute:
+
+python src/train_model.py
+
