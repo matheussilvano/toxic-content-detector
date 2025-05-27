@@ -1,0 +1,7 @@
+*.pyc
+__pycache__/
+.~lock.*
+models/*.pkl
+data/test_predictions.csv
+sample_submission.csv
+test_labels.csv
