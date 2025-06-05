@@ -1,10 +1,10 @@
-import streamlit as st
-from src.predict import predict_text
 import sys
 import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+import streamlit as st
+from src.predict import predict_text
 
 st.title("Detector de Conteúdo Tóxico")
 text = st.text_area("Digite um comentário:")
