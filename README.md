@@ -2,6 +2,8 @@
 
 Este é um projeto de Machine Learning para **detecção de comentários tóxicos** usando NLP com Python e uma interface interativa com Streamlit. Ele utiliza **Regressão Logística** e **TF-IDF** para classificar comentários como **tóxicos ou não tóxicos**.
 
+Você pode testar a aplicação online através do seguinte link: [Detector de Conteúdo Tóxico](https://toxic-content-detector.streamlit.app/)
+
 ---
 
 ## 🚀 Funcionalidades
