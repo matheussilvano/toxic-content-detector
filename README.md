@@ -4,7 +4,7 @@ Este é um projeto de Machine Learning para **detecção de comentários tóxico
 
 Você pode testar a aplicação online através do seguinte link: [Detector de Conteúdo Tóxico](https://toxic-content-detector.streamlit.app/)
 
-![image](https://github.com/user-attachments/assets/1ad55696-674e-4d16-aa86-0364d5693552)
+![image](https://github.com/user-attachments/assets/751e90e4-1139-445f-8ae5-01e2a4a26bc4)
 
 ---
 
