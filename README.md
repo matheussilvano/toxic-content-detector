@@ -1,65 +1,66 @@
-# 🧠 Detector de Conteúdo Tóxico
+# 🧠 Toxic Content Detector
 
-Este é um projeto de Machine Learning para **detecção de comentários tóxicos** usando NLP com Python e uma interface interativa com Streamlit. Ele utiliza **Regressão Logística** e **TF-IDF** para classificar comentários como **tóxicos ou não tóxicos**.
+A machine learning project for **toxic comment detection** using NLP with Python and an interactive Streamlit interface. It uses **Logistic Regression** and **TF-IDF** to classify comments as **toxic or non-toxic**.
 
-Você pode testar a aplicação online através do seguinte link: [Detector de Conteúdo Tóxico](https://toxic-content-detector.streamlit.app/)
+Try the app online: [Toxic Content Detector](https://toxic-content-detector.streamlit.app/)
 
 ![image](https://github.com/user-attachments/assets/751e90e4-1139-445f-8ae5-01e2a4a26bc4)
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-- Pré-processamento de texto com NLTK.
-- Vetorização com TF-IDF.
-- Modelo de Regressão Logística para classificação binária.
-- Interface gráfica com Streamlit.
-- Treinamento e salvamento de modelo e vetorizador com `joblib`.
+- Text preprocessing with NLTK.
+- TF-IDF vectorization.
+- Logistic Regression model for binary classification.
+- Streamlit web interface.
+- Model and vectorizer training and persistence with `joblib`.
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Project structure
 
 ```
 toxic-content-detector/
 ├── app/
-│   └── streamlit_app.py        # Interface com Streamlit
+│   └── streamlit_app.py        # Streamlit interface
 ├── data/
-│   └── train.csv               # Base de dados de treino
+│   └── train.csv               # Training dataset
 ├── models/
-│   ├── logistic_model.pkl      # Modelo treinado
-│   └── vectorizer.pkl          # Vetorizador TF-IDF treinado
+│   ├── logistic_model.pkl      # Trained model
+│   └── vectorizer.pkl          # Trained TF-IDF vectorizer
 ├── src/
-│   ├── preprocessing.py        # Função de limpeza de texto
-│   ├── predict.py              # Função de predição
-|   └──train_model.py           # Script de treinamento
+│   ├── preprocessing.py        # Text cleaning function
+│   ├── predict.py              # Prediction function
+│   └── train_model.py          # Training script
 ├── requirements.txt
 ├── Dockerfile
 └── README.md
 ```
+
 ---
 
-## 🧼 Pré-processamento de Texto
+## 🧼 Text preprocessing
 
-O texto é limpo com os seguintes passos:
+Text is cleaned with the following steps:
 
-- Remoção de URLs
-- Remoção de caracteres especiais e números
-- Conversão para minúsculas
-- Remoção de stopwords (palavras comuns como "the", "and", etc.)
-- Stemização (reduz palavras à sua raiz)
+- URL removal
+- Special character and number removal
+- Lowercasing
+- Stopword removal (common words such as "the", "and", etc.)
+- Stemming (reduces words to their root)
 
 ---
 
 ## 📦 Docker
 
-### Build da imagem
+### Build the image
 
 ```bash
 docker build -t toxic-content-detector .
 ```
 
-### Rodar o container
+### Run the container
 
 ```bash
 docker run -p 8501:8501 toxic-content-detector
@@ -69,13 +70,13 @@ docker run -p 8501:8501 toxic-content-detector
 
 ## 📊 Dataset
 
-O modelo foi treinado com um subconjunto do dataset **[Jigsaw Toxic Comment Classification Challenge (Kaggle)](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge)**.
+The model was trained on a subset of the **[Jigsaw Toxic Comment Classification Challenge (Kaggle)](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge)** dataset.
 
-A base de dados está na pasta `/data`
+The data lives in the `/data` folder.
 
 ---
 
-## 🛠 Tecnologias
+## 🛠 Tech stack
 
 - Python
 - Pandas
@@ -86,8 +87,9 @@ A base de dados está na pasta `/data`
 
 ---
 
-🧠 O modelo (`models/logistic_model.pkl`) já está treinado e pronto para uso.
-Caso deseje treiná-lo novamente, execute:
+🧠 The model (`models/logistic_model.pkl`) is already trained and ready to use.
+To retrain it, run:
 
+```bash
 python src/train_model.py
-
+```
